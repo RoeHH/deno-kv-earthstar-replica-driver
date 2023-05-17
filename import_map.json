@@ -1,0 +1,11 @@
+{
+    "imports": {
+        "earthstar": "https://deno.land/x/earthstar@v10.2.0/mod.ts",
+        "$$./": "https://deno.land/x/earthstar@v10.2.0/src/replica/",
+        "$$../": "https://deno.land/x/earthstar@v10.2.0/src/",
+        "$$$.../": "https://deno.land/x/earthstar@v10.2.0/src/replica/doc_drivers/",
+        "$$$../": "https://deno.land/x/earthstar@v10.2.0/src/replica/",
+        "$$$../../": "https://deno.land/x/earthstar@v10.2.0/src/"
+
+    }
+}
