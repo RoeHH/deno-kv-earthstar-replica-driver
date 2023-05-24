@@ -25,7 +25,7 @@ import {
 import { Logger } from "$$$../../util/log.ts";
 import { checkShareIsValid } from "$$$../../core-validators/addresses.ts";
 
-let logger = new Logger("storage driver async denokv", "yellow");
+const logger = new Logger("storage driver async denokv", "yellow");
 
 //================================================================================
 
@@ -67,7 +67,7 @@ function docComparePathDESCthenNewestFirst<DocType extends DocBase<string>>(
 export class DocDriverDenoKV implements IReplicaDocDriver {
   share: ShareAddress;
   _maxLocalIndex: LocalIndex = -1; // when empty, the max is -1.  when one item is present, starting with index 0, the max is 0
-  _isClosed: boolean = false;
+  _isClosed = false;
   _configKv: Record<string, string> = {};
 
   // Our indexes.
@@ -133,7 +133,7 @@ export class DocDriverDenoKV implements IReplicaDocDriver {
   }
   async deleteConfig(key: string): Promise<boolean> {
     if (this._isClosed) throw new ReplicaIsClosedError();
-    let had = key in this._configKv;
+    const had = key in this._configKv;
     delete this._configKv[key];
     return had;
   }
