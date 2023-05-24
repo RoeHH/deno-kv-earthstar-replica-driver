@@ -6,5 +6,6 @@
             "require-await"
          ]
       }
-   }
+   },
+   "lock": false,
 }
